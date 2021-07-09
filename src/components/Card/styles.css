@@ -1,0 +1,21 @@
+.wrapper {
+  width: 60%;
+  max-width: 100%;
+  background-color: #ebf3ff;
+  border-radius: 5px;
+  border: #e1e4e8 2px solid;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+p {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AvatarPicture from "./components/AvatarPicture"
-import MainPicture from "./components/MainPicture"
+import Card from "./components/Card"
 import "./App.css";
 
 const App = () => {
@@ -18,17 +17,15 @@ const App = () => {
       });
   }, []);
 
-  const handleOnClick = () => {}
+  
 
   return (
-    <div className="wrapper">
+    <div className="app-container">
     <h2>Gallery</h2>
       {
         images && images.map(img => (
-          <div key={img.id} >
-            <AvatarPicture data={img} />
-            <p>{img.user.username}</p>
-            <MainPicture data={img} onClick={handleOnClick}/>
+          <div key={img.id} className="card-container" >
+            <Card imageData={img}/>
           </div>
         ))
       }
