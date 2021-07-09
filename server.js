@@ -10,7 +10,7 @@ app.get('/images', ({ query }, res) => {
 });
 
 app.get(/^\/(car-images|avatars)\//, (req, res) => {
-  res.status(200).sendFile(`public/${req.url}.jpg`, { root: __dirname });
+  res.status(200).sendFile(`public/${req.url}`, { root: __dirname });
 });
 
 app.listen(port, () => {
