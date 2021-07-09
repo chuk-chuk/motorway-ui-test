@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import AvatarPicture from "./components/AvatarPicture"
+import MainPicture from "./components/MainPicture"
+import "./App.css";
 
 const App = () => {
   const [images, setImages] = useState();
@@ -16,13 +18,17 @@ const App = () => {
       });
   }, []);
 
+  const handleOnClick = () => {}
+
   return (
-    <div className='app'>
+    <div className="wrapper">
+    <h2>Gallery</h2>
       {
         images && images.map(img => (
           <div key={img.id} >
-            <img src={img.url} alt=''/>
-            <img src={img.user.profile_image} alt=''/>
+            <AvatarPicture data={img} />
+            <p>{img.user.username}</p>
+            <MainPicture data={img} onClick={handleOnClick}/>
           </div>
         ))
       }
