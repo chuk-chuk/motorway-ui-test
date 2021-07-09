@@ -17,8 +17,6 @@ const App = () => {
       });
   }, []);
 
-  
-
   return (
     <div className="app-container">
     <h2>Gallery</h2>
