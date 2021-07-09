@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-    <h2>Gallery</h2>
+    <h2>Photo Gallery</h2>
       {
         images && images.map(img => (
           <div key={img.id} className="card-container" >
