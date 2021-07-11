@@ -1,0 +1,10 @@
+.button {
+  width: 20%;
+}
+
+.submit-button {
+  color: grey;
+  font-size: 20px;
+  margin: 20px 0px;
+  cursor: pointer;
+}
