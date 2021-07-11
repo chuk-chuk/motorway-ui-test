@@ -1,11 +1,25 @@
-import React, {  useState } from "react";
+import React from "react";
+import useInputState, { notEmpty } from "../../hooks/use-input-state"
+import Input from "../Input";
 import "./styles.css";
 
 const Form = () => {
-  const [showForm, setShowForm] = useState(false);
+  const inputState = useInputState("", [
+    notEmpty("Field is required"),
+  ])
 
   return (
-    <div>Form goes here</div>
+    <>
+    <Input
+      type="email"
+      fieldName="email"
+      labelText="Email"
+      value={inputState.value}
+      onChange={inputState.onChange}
+      onBlur={inputState.onBlur}
+      errorMessage={inputState.errorMessage}
+    />
+    </>
   );
 }
 
