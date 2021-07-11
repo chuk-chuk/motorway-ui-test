@@ -1,0 +1,30 @@
+.input-wrapper {
+  margin-bottom: 15px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.styled-label {
+  display: block;
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+  padding-right: 10px;
+}
+
+.styled-input {
+  display: block;
+  border-radius: 2px;
+  appearance: none;
+  border: 1px solid #888;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error-message {
+  position: absolute;
+  color: red;
+  font-size: 0.75em;
+  margin: 0.5em 0;
+}
